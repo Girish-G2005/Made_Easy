@@ -1,0 +1,58 @@
+import { useState } from "react";
+import axiosInstance from "../api/axios";
+
+function Signup(){
+    const [formData, setFormData] = useState({
+        username: "",
+        email: "",
+        password: "",
+    });
+    const [message, setMessage] = useState("");
+
+    const handleChange = (event) => {
+        setFormData({...formData, [event.target.name]: event.taget.value});
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try{
+            await axiosInstance.post("/auth/signup", formData);
+            setMessage("Signup Successful! You can now login.");
+        }
+        catch(error){
+            console.error(error.response?.data);
+            setMessage("Signup Failed! Try again.");
+        }
+    }
+
+    return(
+        <div className="flex flex-col items-center justify-center min-h-screen bg-light">
+            <h1 className="text-2xl font-bold mb-6">Create an account here</h1>
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-80 bg-gray-100 p-4 rounded shadow-md">
+                <label className="form-label">Username: </label>
+                <input type="text" name="username" value={formData.username} onChange={handleChange} className="form-control border border-primary rounded" required/>
+
+                <label className="form-label">Email: </label>
+                <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control border border-primary rounded" required/>
+
+                <label className="form-label">Password: </label>
+                <input type="password" name="password" value={formData.password} onChange={handleChange} className="form-control border border-primary rounded" required/>
+
+                <button className="btn btn-primary mt-3">Signup</button>
+            </form>
+
+            {message && (
+                <div className={`mt-3 p-2 rounded border ${
+                    message.includes("successful")
+                        ? "bg-success text-white border-success"
+                        : "bg-danger text-white border-danger"
+                    }`}>
+                        {message}
+                </div>
+            )}
+        </div>
+    );
+}
+
+export default Signup;

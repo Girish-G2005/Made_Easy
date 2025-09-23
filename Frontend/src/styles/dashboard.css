@@ -1,0 +1,28 @@
+/* Scrollbar styling for Webkit (Chrome, Edge, Safari) */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 10px;
+  border: 2px solid #f3f4f6;
+}
+
+/* Scrollbar styling for Firefox */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #f3f4f6;
+}
+
+/* Ensure the scroll container stretches fully */
+.scroll-container {
+  flex: 1;              /* fills remaining flex space */
+  min-width: 0;         /* important for flex children to allow scrolling */
+  overflow-y: auto;     
+  overflow-x: hidden;
+}

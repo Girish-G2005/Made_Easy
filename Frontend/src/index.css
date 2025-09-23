@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+#root {
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+/* Remove Chrome/Edge autofill white background */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important;
+  -webkit-text-fill-color: #fff !important; /* keep text white */
+  transition: background-color 5000s ease-in-out 0s; /* trick to keep it transparent */
+}
+
