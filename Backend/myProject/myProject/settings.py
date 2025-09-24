@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-yiim%c*gub^5buzi^nk4y6p(b=+j3d5*h!w8*-yt_=8)bgvkiu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://made-easy-8nr7.onrender.com"]
+ALLOWED_HOSTS = ["made-easy-8nr7.onrender.com"]
 
 
 # Application definition
@@ -139,7 +139,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = ["https://madeeasy-frontend.onrender.com"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),   # how long access token lasts
