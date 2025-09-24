@@ -241,7 +241,7 @@ function Dashboard(){
                     {hotels.map((hotel) => (
                       <div
                         key={hotel.id}
-                        className="w-70 ml-1 sm:w-70 md:w-75 lg:w-90 shadow-lg rounded-md group hover:shadow-2xl cursor-pointer transition-shadow overflow-hidden border border-black/30"
+                        className="w-75 ml-1 sm:w-75 md:w-80 lg:w-90 shadow-lg rounded-md group hover:shadow-2xl cursor-pointer transition-shadow overflow-hidden border border-black/30"
                         onClick={() => setSelectedHotel(hotel)}
                       >
                         <img
@@ -276,7 +276,7 @@ function Dashboard(){
                     {selectedHotel?.items?.map((item) => (
                       <div
                         key={item.id}
-                        className="mt-2 border border-black/20 flex gap-8 md:gap-50 justify-between w-xl sm:w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
+                        className="mt-2 border border-black/20 flex gap-8 md:gap-50 justify-between w-[250px] sm:w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
                       >
                         <span className="text-black font-semibold text-md md:text-2xl">
                           {item.name}
