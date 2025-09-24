@@ -3,7 +3,7 @@ import { Book, UtensilsCrossed, User, LogOut, ThumbsUp, ThumbsDown, ArrowLeftIco
 import { useNavigate } from 'react-router-dom';
 import Document from '../components/Document';
 import axiosInstance from "../api/axios";
-import {jwtDecode} from "jwt-decode";
+import {jwt_decode} from "jwt-decode";
 import { useLocation } from 'react-router-dom';
 import "../styles/dashboard.css";
 
@@ -63,9 +63,17 @@ function Dashboard(){
   useEffect(() => {
     const token = localStorage.getItem("access");
     if(token){
-      const decode = jwtDecode(token);
-      const user = parseInt(decode.user_id, 10);
-      setUserID(user);
+      try {
+        const decode = jwt_decode(token);
+        const user = parseInt(decode.user_id, 10);
+        setUserID(user);
+      } catch (err) {
+        console.error("Failed to decode token:", err);
+        localStorage.clear();  // optional: clear invalid token
+        navigate("/login");
+      }
+    } else {
+      navigate("/login");
     }
   }, []);
 
