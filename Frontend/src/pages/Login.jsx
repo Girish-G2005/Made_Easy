@@ -24,6 +24,11 @@ function Login(){
         try{
             const response = await axiosInstance.post("auth/login/", formData);
             const {access, refresh} = response.data;
+
+            if (!access || !refresh) {
+                throw new Error("No tokens returned from backend");
+            }
+
             setMessage("Login successful!");
             
             if(remember){
