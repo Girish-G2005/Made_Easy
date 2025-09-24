@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://made-easy-8nr7.onrender.com/api/",
+  baseURL: process.env.REACT_APP_BASE_URL + "/",
   headers: {
     "Content-Type": "application/json",
   },
