@@ -62,7 +62,7 @@ function Dashboard(){
   //Decode JWT and set user_id
   useEffect(() => {
     const token = localStorage.getItem("access");
-    if(token){
+    if(token && token !== "undefined"){
       try {
         const decode = jwt_decode(token);
         const user = parseInt(decode.user_id, 10);
