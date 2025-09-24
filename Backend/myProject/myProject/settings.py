@@ -139,7 +139,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CORS_ALLOWED_ORIGINS = ["https://madeeasy-frontend.onrender.com"]
+CORS_ALLOWED_ORIGINS = ["https://made-easyui.onrender.com"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),   # how long access token lasts
