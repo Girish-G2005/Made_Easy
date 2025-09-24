@@ -25,17 +25,16 @@ eslint.config.js
 *.sw?
 
 # Python cache
-Backend/__pycache__/
-Backend/myProject/__pycache__/
+__pycache__
 
 # Virtual environment
-Backend/env/
+env
 
 # Django database
-Backend/myProject/*.sqlite3
+*.sqlite3
 
 # Media files
-Backend/myProject/media/
+media
 
-Frontend/build/
-Frontend/README.md
+build
+README.md
