@@ -276,7 +276,7 @@ function Dashboard(){
                     {selectedHotel?.items?.map((item) => (
                       <div
                         key={item.id}
-                        className="mt-2 border border-black/20 flex gap-15 md:gap-50 justify-between w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
+                        className="mt-2 border border-black/20 flex gap-8 md:gap-50 justify-between w-sm sm:w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
                       >
                         <span className="text-black font-semibold text-md md:text-2xl">
                           {item.name}
