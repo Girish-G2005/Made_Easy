@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import foodImg from "../assets/food.jpg";
 import notesImg from "../assets/notes.jpg";
 import { useNavigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
+import jwt_decode from "jwt-decode";
 
 function Home() {
 
@@ -27,7 +27,7 @@ function Home() {
 
             if (token) {
                 try {
-                const decoded = jwtDecode(token);
+                const decoded = jwt_decode(token);
                 const currentTime = Date.now() / 1000; //jwt expiry check in seconds
                 if (decoded.exp && decoded.exp > currentTime) {
                     navigate("/dashboard"); // token valid
@@ -53,7 +53,7 @@ function Home() {
 
             if (token) {
                 try {
-                const decoded = jwtDecode(token);
+                const decoded = jwt_decode(token);
                 const currentTime = Date.now() / 1000; //jwt expiry check in seconds
                 if (decoded.exp && decoded.exp > currentTime) {
                     navigate("/dashboard", { state: { activeNav: "foodbox" } }); // token valid
