@@ -129,7 +129,7 @@ function Dashboard(){
         </div>
         
         <div className="absolute left-1/2 transform -translate-x-12">
-          <h1 className="text-sm sm:text-xl font-bold text-gray-800 tracking-wide">
+          <h1 className="text-lg sm:text-xl font-bold text-gray-800 tracking-wide">
             Made Easy
           </h1>
         </div>
@@ -237,11 +237,11 @@ function Dashboard(){
                   <h2 className="font-semibold text-lg md:text-2xl sm:text-3xl text-gray-700/90 mb-6">
                     These are the hotels at your location
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-15">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-15">
                     {hotels.map((hotel) => (
                       <div
                         key={hotel.id}
-                        className="w-60 ml-1 sm:w-60 md:w-60 lg:w-90 shadow-lg rounded-md group hover:shadow-2xl cursor-pointer transition-shadow overflow-hidden border border-black/30"
+                        className="w-70 ml-1 sm:w-70 md:w-75 lg:w-90 shadow-lg rounded-md group hover:shadow-2xl cursor-pointer transition-shadow overflow-hidden border border-black/30"
                         onClick={() => setSelectedHotel(hotel)}
                       >
                         <img
@@ -276,7 +276,7 @@ function Dashboard(){
                     {selectedHotel?.items?.map((item) => (
                       <div
                         key={item.id}
-                        className="mt-2 border border-black/20 flex gap-8 md:gap-50 justify-between w-sm sm:w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
+                        className="mt-2 border border-black/20 flex gap-8 md:gap-50 justify-between w-xl sm:w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
                       >
                         <span className="text-black font-semibold text-md md:text-2xl">
                           {item.name}
