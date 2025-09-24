@@ -3,7 +3,7 @@ import { Book, UtensilsCrossed, User, LogOut, ThumbsUp, ThumbsDown, ArrowLeftIco
 import { useNavigate } from 'react-router-dom';
 import Document from '../components/Document';
 import axiosInstance from "../api/axios";
-import {jwt_decode} from "jwt-decode";
+import jwt_decode from "jwt-decode";
 import { useLocation } from 'react-router-dom';
 import "../styles/dashboard.css";
 
