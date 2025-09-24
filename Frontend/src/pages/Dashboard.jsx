@@ -237,17 +237,17 @@ function Dashboard(){
                   <h2 className="font-semibold text-lg md:text-2xl sm:text-3xl text-gray-700/90 mb-6">
                     These are the hotels at your location
                   </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-15">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-15">
                     {hotels.map((hotel) => (
                       <div
                         key={hotel.id}
-                        className="w-50 ml-1 sm:w-55 md:w-60 lg:w-90 shadow-lg rounded-md group hover:shadow-2xl cursor-pointer transition-shadow overflow-hidden border border-black/30"
+                        className="w-60 ml-1 sm:w-60 md:w-60 lg:w-90 shadow-lg rounded-md group hover:shadow-2xl cursor-pointer transition-shadow overflow-hidden border border-black/30"
                         onClick={() => setSelectedHotel(hotel)}
                       >
                         <img
                           src={hotel.image}
                           alt={hotel.name}
-                          className="h-40 sm:h-48 w-full object-cover"
+                          className="h-44 sm:h-48 w-full object-cover"
                         />
                         <div className="p-2 bg-black/25">
                           <h2 className="p-2 text-sm md:text-md font-bold text-black/80 truncate">
@@ -276,9 +276,9 @@ function Dashboard(){
                     {selectedHotel?.items?.map((item) => (
                       <div
                         key={item.id}
-                        className="mt-2 border border-black/20 flex gap-25 md:gap-50 justify-between w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
+                        className="mt-2 border border-black/20 flex gap-15 md:gap-50 justify-between w-md md:w-2xl px-1 md:px-2 py-2 md:py-4 rounded-md bg-white/90 shadow-xl"
                       >
-                        <span className="text-black font-semibold text-lg md:text-2xl">
+                        <span className="text-black font-semibold text-md md:text-2xl">
                           {item.name}
                         </span>
                         <div className="flex gap-1.5 md:gap-4">
