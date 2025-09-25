@@ -151,7 +151,7 @@ function Dashboard(){
                 }`}
               >
                 <Book className="mr-3" size={20} />
-                <span className="text-xs sm:text-sm md:text-base font-normal sm:font-medium">Study Box</span>
+                <span className="text-xs sm:text-sm md:text-base font-normal sm:font-medium">Notes</span>
               </button>
               
               <button
@@ -163,7 +163,7 @@ function Dashboard(){
                 }`}
               >
                 <UtensilsCrossed className="mr-3" size={20} />
-                <span className="text-xs sm:text-sm md:text-base font-normal sm:font-medium">Food Box</span>
+                <span className="text-xs sm:text-sm md:text-base font-normal sm:font-medium">Hotels</span>
               </button>
 
               {/* Logout Button */}
