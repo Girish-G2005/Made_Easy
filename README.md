@@ -72,7 +72,7 @@ REACT_APP_BASE_URL=http://localhost:8000
 
 ## 🖥️ Project Overview
 
-Click here to watch how my project works👉 https://youtu.be/osaozmxgy5I
+### Click here to watch how my project works👉 https://youtu.be/osaozmxgy5I
 
 Here’s a quick walkthrough of the main pages in the MadeEasy app:
 
