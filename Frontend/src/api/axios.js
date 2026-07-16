@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "https://made-easy-8nr7.onrender.com/api/";
 const axiosInstance = axios.create({
-  baseURL: "https://made-easy-8nr7.onrender.com/api/",
+  baseURL: BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -33,7 +33,7 @@ axiosInstance.interceptors.response.use(
         const refreshToken = localStorage.getItem("refresh") || sessionStorage.getItem("refresh");
         if(!refreshToken) throw new Error("No refresh token");
 
-        const res = await axios.post(`${BASE_URL}/api/auth/refresh/`, {refresh: refreshToken});
+        const res = await axios.post(`${BASE_URL}/auth/refresh/`, {refresh: refreshToken});
 
         const newAccess = res.data.access;
         localStorage.setItem("access", newAccess);
