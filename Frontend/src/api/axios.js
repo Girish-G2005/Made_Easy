@@ -1,5 +1,6 @@
 import axios from "axios";
 
+const BASE_URL = "https://made-easy-8nr7.onrender.com/api/";
 const axiosInstance = axios.create({
   baseURL: "https://made-easy-8nr7.onrender.com/api/",
   headers: {
